@@ -1,0 +1,364 @@
+:root {
+    --colorRojo: #E63946;
+    --colorBlanco: #FFFFFF;
+    --colorGrisClaro: #F5F5F5;
+    --colorNegroSuave: #292727;
+}
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body {
+    background-color: var(--colorBlanco);
+    font-family: 'Roboto', sans-serif;
+    color: var(--colorNegroSuave);
+}
+
+.div-container {
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    min-height: 100vh;
+}
+
+/* Estilos del header*/
+.header { 
+    background-color: var(--colorNegroSuave); 
+    padding: 15px; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+}
+
+.contenedor-header { 
+    display: flex; 
+    align-items: center; 
+}
+
+.logo img { 
+    height: 60px; 
+    width: auto; 
+    display: block; 
+    transition: transform 1s; 
+}
+
+.logo:hover img { 
+    transform: rotate(360deg); 
+}
+
+.titulo { 
+    flex: 1; text-align: center; 
+}
+
+.titulo h1 { 
+    color: var(--colorBlanco); 
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 700; 
+    font-size: 32px; 
+    text-transform: uppercase; 
+}
+
+/* Estilos del nav*/
+.menu { 
+    background-color: var(--colorRojo); 
+    padding: 15px 0; 
+    display: flex; 
+    justify-content: center; 
+}
+
+.menu ul { 
+    list-style: none; 
+    display: flex; 
+    gap: 40px; 
+    flex-wrap: wrap; 
+}
+
+.menu ul li a { 
+    text-decoration: none; 
+    color: var(--colorBlanco); 
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 500; 
+    font-size: 18px; 
+    padding: 8px 16px; 
+    border-radius: 4px; 
+    transition: background-color 0.3s ease; 
+}
+
+.menu ul li a:hover { 
+    background-color: rgba(255, 255, 255, 0.2); 
+}
+
+.menu ul li a.activo { 
+    font-weight: 700; 
+    background-color: rgba(255, 255, 255, 0.3); 
+}
+
+/* Estilos del main */
+
+.main { 
+    width: 100%; 
+    background-color: var(--colorBlanco); 
+}
+
+.titulo-principal {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    text-transform: uppercase;
+    color: var(--colorRojo);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.subtitulo {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    color: #555;
+    font-size: 18px;
+}
+
+.seccion-apertura {
+    padding: 60px 20px;
+    background-color: var(--colorBlanco);
+    text-align: center;
+}
+
+.caja-horario {
+    background-color: var(--colorNegroSuave);
+    color: var(--colorBlanco);
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.dia-horario {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    font-size: 18px;
+}
+
+.dia-horario:last-child { 
+    border-bottom: none; 
+}
+
+.dia-horario .dia { 
+    font-weight: 700; 
+    font-family: 'Montserrat', sans-serif; 
+}
+
+.dia-horario .hora { 
+    font-family: 'Roboto', sans-serif; 
+}
+
+.seccion-tarifas {
+    padding: 60px 20px;
+    background-color: var(--colorGrisClaro);
+}
+
+.grid-tarifas {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.tarjeta-precio {
+    background-color: var(--colorBlanco);
+    border-radius: 15px;
+    padding: 40px 30px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    position: relative;
+    border: 1px solid transparent;
+}
+
+.tarjeta-precio:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    border-color: var(--colorRojo);
+}
+
+.tarjeta-precio.destacado {
+    transform: scale(1.05);
+    border: 2px solid var(--colorRojo);
+    box-shadow: 0 10px 25px rgba(230, 57, 70, 0.15);
+    z-index: 2;
+}
+
+.tarjeta-precio.destacado:hover {
+    transform: scale(1.08) translateY(-5px);
+}
+
+.etiqueta-popular {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--colorRojo);
+    color: var(--colorBlanco);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.nombre-plan {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: var(--colorNegroSuave);
+}
+
+.precio {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--colorRojo);
+    margin-bottom: 30px;
+}
+
+.precio span {
+    font-size: 16px;
+    font-weight: 400;
+    color: #666;
+}
+
+.lista-ventajas {
+    list-style: none;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.lista-ventajas li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    color: #444;
+    font-size: 15px;
+}
+
+.lista-ventajas li.no-incluido {
+    color: #bbb;
+    text-decoration: line-through;
+}
+
+.boton-precio {
+    display: inline-block;
+    padding: 12px 30px;
+    border: 2px solid var(--colorRojo);
+    color: var(--colorRojo);
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 50px;
+    transition: all 0.3s;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.boton-precio:hover {
+    background-color: var(--colorRojo);
+    color: var(--colorBlanco);
+}
+
+.boton-relleno {
+    background-color: var(--colorRojo);
+    color: var(--colorBlanco);
+}
+
+.boton-relleno:hover {
+    background-color: #d62839;
+}
+
+.seccion-ofertas {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contenedor-ofertas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.oferta-item {
+    background-color: #fff;
+    border: 2px dashed #ddd;
+    padding: 30px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s;
+}
+
+.oferta-item:hover {
+    border-color: var(--colorRojo);
+    transform: scale(1.02);
+}
+
+.oferta-color {
+    background-color: #FFF0F1;
+    border-style: solid;
+    border-color: #ffcbd1;
+}
+
+.contenido-oferta h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: var(--colorNegroSuave);
+}
+
+.contenido-oferta p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Estilos del footer */
+.footer { 
+    background-color: var(--colorNegroSuave); 
+    color: var(--colorBlanco); 
+    padding: 30px 0; 
+}
+
+.contenedor-footer { 
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center; 
+    flex-wrap: wrap; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    gap: 20px; 
+}
+
+.copyright p { 
+    font-size: 14px; 
+}
+
+.redes-sociales, .enlaces-rapidos { 
+    display: flex; 
+    gap: 20px; 
+}
+
+.footer a { 
+    text-decoration: none; 
+    color: var(--colorBlanco); 
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 500; 
+    transition: color 0.3s ease; 
+}
+
+.footer a:hover { 
+    color: var(--colorRojo); 
+}
