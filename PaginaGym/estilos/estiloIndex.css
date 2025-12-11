@@ -37,31 +37,38 @@ body {
 }
 
 /*Estilos del header*/
-.header {
-    background-color: var(--colorNegroSuave);
-    padding: 15px;
+.header { 
+    background-color: var(--colorNegroSuave); 
+    padding: 15px; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
 }
 
-.contenedor-header {
-    display: flex;
-    align-items: center;
+.contenedor-header { 
+    display: flex; 
+    align-items: center; 
 }
 
-.logo img {
-    width: 10%;
-    overflow: hidden;
-    transition: transform 1s;
+.logo img { 
+    height: 60px; 
+    width: auto; 
+    display: block; 
+    transition: transform 1s; 
 }
 
-.logo:hover img {
-    transform: rotate(360deg);
+.logo:hover img { 
+    transform: rotate(360deg); 
 }
 
-.titulo h1{
-    color: var(--colorBlanco);
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 32px;
+.titulo { 
+    flex: 1; text-align: center; 
+}
+
+.titulo h1 { 
+    color: var(--colorBlanco); 
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 700; 
+    font-size: 32px; 
+    text-transform: uppercase; 
 }
 
 /*Estilos del nav*/
@@ -196,4 +203,73 @@ body {
 
 .footer a:hover {
     color: var(--colorRojo);
+}
+
+@media (max-width: 768px) {
+    
+    .contenedor-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .logo img {
+        height: 50px;
+    }
+
+    .titulo h1 {
+        font-size: 24px;
+    }
+
+    .menu {
+        padding: 10px;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu ul li a {
+        display: block;
+        width: 100%;
+        padding: 15px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+    }
+
+    .banner-principal {
+        height: 300px;
+    }
+    
+    .banner-principal .texto-banner {
+        font-size: 40px; 
+    }
+
+    .bienvenida {
+        padding: 40px 20px;
+    }
+
+    .bienvenida h2 {
+        font-size: 28px;
+    }
+
+    .bienvenida p {
+        font-size: 16px;
+        text-align: justify;
+    }
+
+    .contenedor-footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .redes-sociales, .enlaces-rapidos {
+        justify-content: center;
+    }
 }

@@ -22,10 +22,10 @@ body {
 }
 
 /* Estilos del header*/
-.header {
-    background-color: var(--colorNegroSuave);
-    padding: 15px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+.header { 
+    background-color: var(--colorNegroSuave); 
+    padding: 15px; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
 }
 
 .contenedor-header { 
@@ -36,8 +36,8 @@ body {
 .logo img { 
     height: 60px; 
     width: auto; 
-    display: block;
-    transition: transform 1s;
+    display: block; 
+    transition: transform 1s; 
 }
 
 .logo:hover img { 
@@ -45,16 +45,15 @@ body {
 }
 
 .titulo { 
-    flex: 1; 
-    text-align: center; 
+    flex: 1; text-align: center; 
 }
 
-.titulo h1 {
-    color: var(--colorBlanco);
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 32px;
-    text-transform: uppercase;
+.titulo h1 { 
+    color: var(--colorBlanco); 
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 700; 
+    font-size: 32px; 
+    text-transform: uppercase; 
 }
 
 /* Estilos del nav */
@@ -226,4 +225,70 @@ body {
 
 .footer a:hover { 
     color: var(--colorRojo); 
+}
+
+@media (max-width: 768px) {
+    
+    .contenedor-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .logo img {
+        height: 50px;
+    }
+
+    .titulo h1 {
+        font-size: 24px;
+    }
+
+    .menu {
+        padding: 10px;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .menu ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu ul li a {
+        display: block;
+        width: 100%;
+        padding: 15px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+    }
+
+    .seccion-monitores {
+        padding: 40px 15px;
+    }
+
+    .titulo-principal {
+        font-size: 28px;
+    }
+
+    .intro-monitores {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+
+    .grid-monitores {
+        gap: 30px;
+    }
+
+    .contenedor-footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .redes-sociales, .enlaces-rapidos {
+        justify-content: center;
+    }
 }
